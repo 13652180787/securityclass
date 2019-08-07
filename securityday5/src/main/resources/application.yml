@@ -1,0 +1,26 @@
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: debug
+    org.springframework.security: debug
+    org.springframework.security.oauth2: INFO
+    org.springframework.boot.autoconfigure: INFO
+    cn.com.taiji.security.securityday1: debug
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: "123456"
+    url: jdbc:mysql://localhost:3306/taiji_security?serverTimezone=GMT%2B8&amp&useSSL=false
+    initialization-mode: always
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+server:
+  servlet:
+    session:
+      cookie:
+        name: SECURITYCLASS
